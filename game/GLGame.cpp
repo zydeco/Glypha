@@ -420,8 +420,9 @@ void GL::Game::drawLightning() const
     }
     
     Renderer *r = renderer_;
+    float scale = r->bounds().width() / GL_GAME_WIDTH;
     r->setFillColor(1.0, 1.0, 0);
-    r->beginLines(2.0f);
+    r->beginLines(1.0f * scale, false);
     r->moveTo(leftLightningPts[0].h, leftLightningPts[0].v);
     for (int i = 0; i < kNumLightningPts - 1; i++) {
         r->moveTo(leftLightningPts[i].h, leftLightningPts[i].v);
