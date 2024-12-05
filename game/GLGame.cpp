@@ -2837,8 +2837,8 @@ void GL::Game::showAbout()
 
 void GL::Game::drawAbout(Renderer *r) const
 {
-    int x = (r->bounds().width() - aboutImg.width()) / 2;
-    int y = (r->bounds().height() - aboutImg.height()) / 2;
+    int x = (GL_GAME_WIDTH - aboutImg.width()) / 2;
+    int y = (GL_GAME_HEIGHT - aboutImg.height()) / 2;
     
     aboutImg.draw(x, y);
 
